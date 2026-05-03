@@ -80,6 +80,7 @@ export default function DashboardPage() {
   const [isAdmin, setIsAdmin] = useState(false);
   const [showAdminLogin, setShowAdminLogin] = useState(false);
   const [adminPassword, setAdminPassword] = useState("");
+  const [savedAdminPassword, setSavedAdminPassword] = useState("");
   const [adminLoginLoading, setAdminLoginLoading] = useState(false);
   const [adminLoginError, setAdminLoginError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -102,6 +103,7 @@ export default function DashboardPage() {
       const data = await res.json();
       if (data.ok) {
         setIsAdmin(true);
+        setSavedAdminPassword(adminPassword);
         sessionStorage.setItem("isAdmin", "1");
         setShowAdminLogin(false);
         setAdminPassword("");
@@ -353,8 +355,10 @@ export default function DashboardPage() {
               <AdminLogPanel
                 rows={rows}
                 sheetName={selectedMonth}
+                adminPassword={savedAdminPassword}
                 onStepDeleted={handleStepDeleted}
                 onStepAdded={handleStepAdded}
+                onRefresh={handleRefresh}
               />
             )}
           </>
