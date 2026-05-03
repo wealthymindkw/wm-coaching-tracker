@@ -97,7 +97,6 @@ export async function deleteStep(sheetName: string, rowIndex: number): Promise<v
 
 export async function createMonthSheet(sheetName: string): Promise<void> {
   const sheets = google.sheets({ version: "v4", auth: getAuth() });
-  // Create sheet if it doesn't exist yet (ignore error if already exists)
   try {
     await sheets.spreadsheets.batchUpdate({
       spreadsheetId: SPREADSHEET_ID,
@@ -105,22 +104,18 @@ export async function createMonthSheet(sheetName: string): Promise<void> {
         requests: [{ addSheet: { properties: { title: sheetName } } }],
       },
     });
+    // Sheet is newly created — write headers
+    await sheets.spreadsheets.values.update({
+      spreadsheetId: SPREADSHEET_ID,
+      range: `'${sheetName}'!A1:H1`,
+      valueInputOption: "USER_ENTERED",
+      requestBody: {
+        values: [["Date", "Time", "UserID", "Username", "FirstName", "LastName", "Step", "Results"]],
+      },
+    });
   } catch {
-    // Sheet already exists — continue to fix headers
+    // Sheet already exists — do nothing, preserve existing data
   }
-  // Clear any wrong data in first two rows then write correct headers
-  await sheets.spreadsheets.values.clear({
-    spreadsheetId: SPREADSHEET_ID,
-    range: `'${sheetName}'!A1:Z2`,
-  });
-  await sheets.spreadsheets.values.update({
-    spreadsheetId: SPREADSHEET_ID,
-    range: `'${sheetName}'!A1:H1`,
-    valueInputOption: "USER_ENTERED",
-    requestBody: {
-      values: [["Date", "Time", "UserID", "Username", "FirstName", "LastName", "Step", "Results"]],
-    },
-  });
 }
 
 export async function addStep(

@@ -126,15 +126,22 @@ export default function DashboardPage() {
     const now = new Date();
     const currentMonthName = now.toLocaleString("en-US", { month: "long" }) + " " + now.getFullYear();
 
-    fetch("/api/months", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ month: currentMonthName }),
-    })
+    fetch("/api/months")
       .then((r) => r.json())
-      .then((data) => {
-        const updatedMonths: string[] = data.months ?? [];
-        setMonths(updatedMonths);
+      .then(async (data) => {
+        const existingMonths: string[] = data.months ?? [];
+        if (!existingMonths.includes(currentMonthName)) {
+          // Only create if this month's sheet doesn't exist yet
+          const res = await fetch("/api/months", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ month: currentMonthName }),
+          });
+          const created = await res.json();
+          setMonths(created.months ?? existingMonths);
+        } else {
+          setMonths(existingMonths);
+        }
         setSelectedMonth(currentMonthName);
       })
       .catch((e) => setError(String(e)));
