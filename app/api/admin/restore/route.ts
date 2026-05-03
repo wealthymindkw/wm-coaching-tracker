@@ -32,13 +32,8 @@ const LOST_ENTRIES = [
   { date: "03/05/2026", time: "12:00", firstName: "عبير",     lastName: "",         step: "فلو اب" },
 ];
 
-export async function POST(req: Request) {
+export async function POST() {
   try {
-    const { password } = await req.json();
-    const correct = process.env.ADMIN_PASSWORD ?? "admin";
-    if (password !== correct) {
-      return NextResponse.json({ ok: false, error: "Unauthorized" }, { status: 401 });
-    }
 
     // Refuse to run if sheet already has data (prevent duplicate restore)
     const existing = await getSheetData(SHEET);

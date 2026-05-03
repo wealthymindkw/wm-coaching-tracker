@@ -8,41 +8,18 @@ import { AddStepModal } from "./AddStepModal";
 interface Props {
   rows: StepRow[];
   sheetName: string;
-  adminPassword: string;
   onStepDeleted: (rowIndex: number) => void;
   onStepAdded: (row: Omit<StepRow, "rowIndex">) => void;
   onRefresh: () => void;
 }
 
-export function AdminLogPanel({ rows, sheetName, adminPassword, onStepDeleted, onStepAdded, onRefresh }: Props) {
+export function AdminLogPanel({ rows, sheetName, onStepDeleted, onStepAdded, onRefresh }: Props) {
   const [deletingIdx, setDeletingIdx] = useState<number | null>(null);
   const [deleteError, setDeleteError] = useState("");
   const [addingStep, setAddingStep] = useState(false);
   const [restoring, setRestoring] = useState(false);
   const [restoreResult, setRestoreResult] = useState<{ success: number; total: number } | null>(null);
   const [restoreError, setRestoreError] = useState("");
-
-  async function handleRestore() {
-    if (!confirm("سيتم استعادة البيانات المفقودة من مايو (١-٣ مايو ٢٠٢٦). متأكد؟")) return;
-    setRestoring(true);
-    setRestoreError("");
-    setRestoreResult(null);
-    try {
-      const res = await fetch("/api/admin/restore", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password: adminPassword }),
-      });
-      const data = await res.json();
-      if (!data.ok) throw new Error(data.error);
-      setRestoreResult({ success: data.success, total: data.total });
-      onRefresh();
-    } catch (e) {
-      setRestoreError(String(e));
-    } finally {
-      setRestoring(false);
-    }
-  }
 
   async function handleDelete(row: StepRow) {
     if (!confirm(`حذف الدفعة؟\n${row.firstName} ${row.lastName} — ${row.date}\n"${row.step.substring(0, 60)}..."`)) return;
@@ -63,12 +40,29 @@ export function AdminLogPanel({ rows, sheetName, adminPassword, onStepDeleted, o
     }
   }
 
+  async function handleRestore() {
+    if (!confirm("سيتم استعادة البيانات المفقودة من مايو (١-٣ مايو ٢٠٢٦). متأكد؟")) return;
+    setRestoring(true);
+    setRestoreError("");
+    setRestoreResult(null);
+    try {
+      const res = await fetch("/api/admin/restore", { method: "POST" });
+      const data = await res.json();
+      if (!data.ok) throw new Error(data.error);
+      setRestoreResult({ success: data.success, total: data.total });
+      onRefresh();
+    } catch (e) {
+      setRestoreError(String(e));
+    } finally {
+      setRestoring(false);
+    }
+  }
+
   const sorted = [...rows].sort((a, b) => b.rowIndex - a.rowIndex);
 
   return (
     <>
       <div className="rounded-xl border border-amber-500/30 bg-[hsl(var(--card))] shadow-sm overflow-hidden">
-        {/* Header */}
         <div className="px-6 py-4 border-b border-[hsl(var(--border))] flex items-center justify-between bg-amber-500/5">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center">
@@ -131,13 +125,8 @@ export function AdminLogPanel({ rows, sheetName, adminPassword, onStepDeleted, o
               </thead>
               <tbody className="divide-y divide-[hsl(var(--border))]">
                 {sorted.map((row, idx) => (
-                  <tr
-                    key={row.rowIndex}
-                    className="hover:bg-[hsl(var(--muted))]/10 transition-colors group"
-                  >
-                    <td className="px-4 py-3 text-xs text-[hsl(var(--muted-foreground))]">
-                      {rows.length - idx}
-                    </td>
+                  <tr key={row.rowIndex} className="hover:bg-[hsl(var(--muted))]/10 transition-colors group">
+                    <td className="px-4 py-3 text-xs text-[hsl(var(--muted-foreground))]">{rows.length - idx}</td>
                     <td className="px-4 py-3 text-xs text-[hsl(var(--muted-foreground))] whitespace-nowrap">
                       <div>{row.date}</div>
                       <div className="opacity-60">{row.time}</div>

@@ -4,7 +4,6 @@ import { useState, useEffect, useCallback } from "react";
 import {
   Activity, Users, TrendingUp, Calendar,
   RefreshCw, ChevronDown, Star, Loader2,
-  Lock, LockOpen, X, Eye, EyeOff,
 } from "lucide-react";
 import { clsx } from "clsx";
 import { KpiCard } from "@/components/KpiCard";
@@ -76,53 +75,6 @@ export default function DashboardPage() {
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState("");
 
-  // Admin state
-  const [isAdmin, setIsAdmin] = useState(false);
-  const [showAdminLogin, setShowAdminLogin] = useState(false);
-  const [adminPassword, setAdminPassword] = useState("");
-  const [savedAdminPassword, setSavedAdminPassword] = useState("");
-  const [adminLoginLoading, setAdminLoginLoading] = useState(false);
-  const [adminLoginError, setAdminLoginError] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-
-  useEffect(() => {
-    if (typeof window !== "undefined" && sessionStorage.getItem("isAdmin") === "1") {
-      setIsAdmin(true);
-    }
-  }, []);
-
-  async function handleAdminLogin() {
-    setAdminLoginLoading(true);
-    setAdminLoginError("");
-    try {
-      const res = await fetch("/api/admin/auth", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ password: adminPassword }),
-      });
-      const data = await res.json();
-      if (data.ok) {
-        setIsAdmin(true);
-        setSavedAdminPassword(adminPassword);
-        sessionStorage.setItem("isAdmin", "1");
-        setShowAdminLogin(false);
-        setAdminPassword("");
-        setShowPassword(false);
-      } else {
-        setAdminLoginError("كلمة سر خاطئة");
-      }
-    } catch {
-      setAdminLoginError("خطأ في الاتصال");
-    } finally {
-      setAdminLoginLoading(false);
-    }
-  }
-
-  function handleAdminLogout() {
-    setIsAdmin(false);
-    sessionStorage.removeItem("isAdmin");
-  }
-
   // Fetch available months on mount, auto-create current month if missing
   useEffect(() => {
     const now = new Date();
@@ -133,7 +85,6 @@ export default function DashboardPage() {
       .then(async (data) => {
         const existingMonths: string[] = data.months ?? [];
         if (!existingMonths.includes(currentMonthName)) {
-          // Only create if this month's sheet doesn't exist yet
           const res = await fetch("/api/months", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -149,7 +100,6 @@ export default function DashboardPage() {
       .catch((e) => setError(String(e)));
   }, []);
 
-  // Fetch data when month changes
   const loadData = useCallback(async (month: string) => {
     if (!month) return;
     setLoading(true);
@@ -175,7 +125,6 @@ export default function DashboardPage() {
     setRefreshing(false);
   }
 
-  // Step CRUD handlers
   function handleStepUpdated(updated: StepRow) {
     setRows((prev) => prev.map((r) => r.rowIndex === updated.rowIndex ? updated : r));
     setMembers(buildStats(rows.map((r) => r.rowIndex === updated.rowIndex ? updated : r)));
@@ -195,13 +144,10 @@ export default function DashboardPage() {
     ? members.find((m) => (m.userId || m.username || m.firstName) === selectedMemberKey) ?? null
     : null;
 
-  // KPI values
   const totalSteps = rows.length;
   const totalMembers = members.length;
   const topMember = members[0];
   const avgSteps = totalMembers > 0 ? (totalSteps / totalMembers).toFixed(1) : "0";
-
-  const inp = "w-full bg-[hsl(var(--background))] border border-[hsl(var(--border))] rounded-lg px-3 py-2.5 text-sm text-[hsl(var(--foreground))] focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition";
 
   return (
     <div className="min-h-screen bg-[hsl(var(--background))]">
@@ -219,7 +165,6 @@ export default function DashboardPage() {
           </div>
 
           <div className="ml-auto flex items-center gap-3">
-            {/* Month selector */}
             <div className="relative">
               <select
                 value={selectedMonth}
@@ -233,7 +178,6 @@ export default function DashboardPage() {
               <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-[hsl(var(--muted-foreground))] pointer-events-none" />
             </div>
 
-            {/* Refresh button */}
             <button
               onClick={handleRefresh}
               disabled={loading || refreshing}
@@ -242,36 +186,12 @@ export default function DashboardPage() {
               <RefreshCw className={clsx("w-3.5 h-3.5", (loading || refreshing) && "animate-spin")} />
               تحديث
             </button>
-
-            {/* Admin button */}
-            {isAdmin ? (
-              <div className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-400 text-sm">
-                <LockOpen className="w-3.5 h-3.5" />
-                <span className="font-medium">Admin</span>
-                <button
-                  onClick={handleAdminLogout}
-                  className="ml-1 p-0.5 rounded hover:bg-amber-500/20 transition-colors"
-                  title="تسجيل خروج"
-                >
-                  <X className="w-3 h-3" />
-                </button>
-              </div>
-            ) : (
-              <button
-                onClick={() => { setShowAdminLogin(true); setAdminLoginError(""); setAdminPassword(""); }}
-                className="flex items-center gap-2 px-3 py-2 rounded-lg border border-[hsl(var(--border))] text-sm text-[hsl(var(--muted-foreground))] hover:bg-[hsl(var(--muted))]/50 transition"
-              >
-                <Lock className="w-3.5 h-3.5" />
-                Admin
-              </button>
-            )}
           </div>
         </div>
       </header>
 
       {/* Main content */}
       <main className="max-w-7xl mx-auto px-6 py-8 space-y-8">
-        {/* Month header */}
         <div>
           <h2 className="text-2xl font-bold text-[hsl(var(--foreground))]">
             {selectedMonth || "Loading..."}
@@ -282,14 +202,12 @@ export default function DashboardPage() {
           </p>
         </div>
 
-        {/* Error */}
         {error && (
           <div className="bg-red-500/10 border border-red-500/30 rounded-xl px-5 py-4 text-red-400 text-sm">
             {error}
           </div>
         )}
 
-        {/* Loading skeleton */}
         {loading ? (
           <div className="flex items-center justify-center py-24">
             <div className="flex flex-col items-center gap-3">
@@ -299,46 +217,19 @@ export default function DashboardPage() {
           </div>
         ) : (
           <>
-            {/* KPI Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <KpiCard
-                title="إجمالي الخطوات"
-                value={String(totalSteps)}
-                subtitle={selectedMonth}
-                icon={TrendingUp}
-                accent="blue"
-              />
-              <KpiCard
-                title="المشاركون"
-                value={String(totalMembers)}
-                subtitle="عدد الأعضاء النشطين"
-                icon={Users}
-                accent="green"
-              />
-              <KpiCard
-                title="المتصدر"
-                value={topMember ? topMember.fullName.split(" ")[0] : "—"}
-                subtitle={topMember ? `${topMember.stepCount} خطوات` : "لا يوجد"}
-                icon={Star}
-                accent="amber"
-              />
-              <KpiCard
-                title="المعدل / شخص"
-                value={avgSteps}
-                subtitle="متوسط الخطوات"
-                icon={Activity}
-                accent="purple"
-              />
+              <KpiCard title="إجمالي الخطوات" value={String(totalSteps)} subtitle={selectedMonth} icon={TrendingUp} accent="blue" />
+              <KpiCard title="المشاركون" value={String(totalMembers)} subtitle="عدد الأعضاء النشطين" icon={Users} accent="green" />
+              <KpiCard title="المتصدر" value={topMember ? topMember.fullName.split(" ")[0] : "—"} subtitle={topMember ? `${topMember.stepCount} خطوات` : "لا يوجد"} icon={Star} accent="amber" />
+              <KpiCard title="المعدل / شخص" value={avgSteps} subtitle="متوسط الخطوات" icon={Activity} accent="purple" />
             </div>
 
-            {/* Leaderboard */}
             <Leaderboard
               members={members}
               selectedUserId={selectedMemberKey}
               onSelect={(key) => setSelectedMemberKey(prev => prev === key ? null : key)}
             />
 
-            {/* Steps Panel for selected member */}
             {selectedMember && (
               <StepsPanel
                 member={selectedMember}
@@ -350,78 +241,16 @@ export default function DashboardPage() {
               />
             )}
 
-            {/* Admin Log Panel */}
-            {isAdmin && (
-              <AdminLogPanel
-                rows={rows}
-                sheetName={selectedMonth}
-                adminPassword={savedAdminPassword}
-                onStepDeleted={handleStepDeleted}
-                onStepAdded={handleStepAdded}
-                onRefresh={handleRefresh}
-              />
-            )}
+            <AdminLogPanel
+              rows={rows}
+              sheetName={selectedMonth}
+              onStepDeleted={handleStepDeleted}
+              onStepAdded={handleStepAdded}
+              onRefresh={handleRefresh}
+            />
           </>
         )}
       </main>
-
-      {/* Admin Login Modal */}
-      {showAdminLogin && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
-          onClick={() => setShowAdminLogin(false)}
-        >
-          <div
-            className="bg-[hsl(var(--card))] border border-[hsl(var(--border))] rounded-2xl p-6 w-full max-w-sm shadow-2xl space-y-4"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Lock className="w-4 h-4 text-amber-400" />
-                <h2 className="text-lg font-semibold text-[hsl(var(--foreground))]">دخول الأدمن</h2>
-              </div>
-              <button
-                onClick={() => setShowAdminLogin(false)}
-                className="p-1.5 rounded-md text-[hsl(var(--muted-foreground))] hover:bg-[hsl(var(--muted))]/50 transition-colors"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-
-            <div className="relative">
-              <input
-                type={showPassword ? "text" : "password"}
-                className={inp}
-                placeholder="كلمة السر"
-                value={adminPassword}
-                onChange={(e) => setAdminPassword(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && handleAdminLogin()}
-                autoFocus
-              />
-              <button
-                type="button"
-                onClick={() => setShowPassword((v) => !v)}
-                className="absolute left-3 top-1/2 -translate-y-1/2 text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))] transition-colors"
-              >
-                {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-              </button>
-            </div>
-
-            {adminLoginError && (
-              <p className="text-red-400 text-sm">{adminLoginError}</p>
-            )}
-
-            <button
-              onClick={handleAdminLogin}
-              disabled={adminLoginLoading || !adminPassword.trim()}
-              className="w-full py-2.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white text-sm font-semibold transition disabled:opacity-60 flex items-center justify-center gap-2"
-            >
-              {adminLoginLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <LockOpen className="w-4 h-4" />}
-              {adminLoginLoading ? "جاري التحقق..." : "دخول"}
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
