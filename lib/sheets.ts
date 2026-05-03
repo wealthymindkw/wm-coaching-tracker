@@ -97,11 +97,21 @@ export async function deleteStep(sheetName: string, rowIndex: number): Promise<v
 
 export async function createMonthSheet(sheetName: string): Promise<void> {
   const sheets = google.sheets({ version: "v4", auth: getAuth() });
-  await sheets.spreadsheets.batchUpdate({
+  // Create sheet if it doesn't exist yet (ignore error if already exists)
+  try {
+    await sheets.spreadsheets.batchUpdate({
+      spreadsheetId: SPREADSHEET_ID,
+      requestBody: {
+        requests: [{ addSheet: { properties: { title: sheetName } } }],
+      },
+    });
+  } catch {
+    // Sheet already exists — continue to fix headers
+  }
+  // Clear any wrong data in first two rows then write correct headers
+  await sheets.spreadsheets.values.clear({
     spreadsheetId: SPREADSHEET_ID,
-    requestBody: {
-      requests: [{ addSheet: { properties: { title: sheetName } } }],
-    },
+    range: `'${sheetName}'!A1:Z2`,
   });
   await sheets.spreadsheets.values.update({
     spreadsheetId: SPREADSHEET_ID,
