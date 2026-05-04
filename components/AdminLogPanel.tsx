@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Trash2, Plus, Loader2, AlertTriangle, ClipboardList, RotateCcw, CheckCircle2 } from "lucide-react";
+import { Trash2, Plus, Loader2, AlertTriangle, ClipboardList } from "lucide-react";
 import type { StepRow } from "@/lib/types";
 import { AddStepModal } from "./AddStepModal";
 
@@ -10,16 +10,12 @@ interface Props {
   sheetName: string;
   onStepDeleted: (rowIndex: number) => void;
   onStepAdded: (row: Omit<StepRow, "rowIndex">) => void;
-  onRefresh: () => void;
 }
 
-export function AdminLogPanel({ rows, sheetName, onStepDeleted, onStepAdded, onRefresh }: Props) {
+export function AdminLogPanel({ rows, sheetName, onStepDeleted, onStepAdded }: Props) {
   const [deletingIdx, setDeletingIdx] = useState<number | null>(null);
   const [deleteError, setDeleteError] = useState("");
   const [addingStep, setAddingStep] = useState(false);
-  const [restoring, setRestoring] = useState(false);
-  const [restoreResult, setRestoreResult] = useState<{ success: number; total: number } | null>(null);
-  const [restoreError, setRestoreError] = useState("");
 
   async function handleDelete(row: StepRow) {
     if (!confirm(`حذف الدفعة؟\n${row.firstName} ${row.lastName} — ${row.date}\n"${row.step.substring(0, 60)}..."`)) return;
@@ -40,24 +36,6 @@ export function AdminLogPanel({ rows, sheetName, onStepDeleted, onStepAdded, onR
     }
   }
 
-  async function handleRestore() {
-    if (!confirm("سيتم استعادة البيانات المفقودة من مايو (١-٣ مايو ٢٠٢٦). متأكد؟")) return;
-    setRestoring(true);
-    setRestoreError("");
-    setRestoreResult(null);
-    try {
-      const res = await fetch("/api/admin/restore", { method: "POST" });
-      const data = await res.json();
-      if (!data.ok) throw new Error(data.error);
-      setRestoreResult({ success: data.success, total: data.total });
-      onRefresh();
-    } catch (e) {
-      setRestoreError(String(e));
-    } finally {
-      setRestoring(false);
-    }
-  }
-
   const sorted = [...rows].sort((a, b) => b.rowIndex - a.rowIndex);
 
   return (
@@ -73,37 +51,19 @@ export function AdminLogPanel({ rows, sheetName, onStepDeleted, onStepAdded, onR
               <p className="text-xs text-[hsl(var(--muted-foreground))] mt-0.5">{rows.length} دفعة — {sheetName}</p>
             </div>
           </div>
-          <div className="flex items-center gap-2">
-            {sheetName === "May 2026" && !restoreResult && (
-              <button
-                onClick={handleRestore}
-                disabled={restoring}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-400 text-xs font-semibold border border-amber-500/30 transition disabled:opacity-60"
-              >
-                {restoring ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <RotateCcw className="w-3.5 h-3.5" />}
-                {restoring ? "جاري الاستعادة..." : "استعادة البيانات المفقودة"}
-              </button>
-            )}
-            {restoreResult && (
-              <span className="flex items-center gap-1.5 text-xs text-emerald-400">
-                <CheckCircle2 className="w-3.5 h-3.5" />
-                تمت الاستعادة ({restoreResult.success}/{restoreResult.total})
-              </span>
-            )}
-            <button
-              onClick={() => setAddingStep(true)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-500 hover:bg-brand-600 text-white text-xs font-semibold transition shadow-lg shadow-brand-500/20"
-            >
-              <Plus className="w-3.5 h-3.5" />
-              إضافة دفعة
-            </button>
-          </div>
+          <button
+            onClick={() => setAddingStep(true)}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-brand-500 hover:bg-brand-600 text-white text-xs font-semibold transition shadow-lg shadow-brand-500/20"
+          >
+            <Plus className="w-3.5 h-3.5" />
+            إضافة دفعة
+          </button>
         </div>
 
-        {(deleteError || restoreError) && (
+        {deleteError && (
           <div className="mx-4 mt-3 bg-red-500/10 border border-red-500/30 rounded-lg px-4 py-2.5 text-red-400 text-sm flex items-center gap-2">
             <AlertTriangle className="w-4 h-4 shrink-0" />
-            {deleteError || restoreError}
+            {deleteError}
           </div>
         )}
 

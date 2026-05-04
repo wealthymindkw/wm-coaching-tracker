@@ -119,6 +119,13 @@ export default function DashboardPage() {
 
   useEffect(() => { if (selectedMonth) loadData(selectedMonth); }, [selectedMonth, loadData]);
 
+  // Auto-refresh every 60 seconds to pick up new Telegram entries
+  useEffect(() => {
+    if (!selectedMonth) return;
+    const interval = setInterval(() => loadData(selectedMonth), 60_000);
+    return () => clearInterval(interval);
+  }, [selectedMonth, loadData]);
+
   async function handleRefresh() {
     setRefreshing(true);
     await loadData(selectedMonth);
@@ -246,7 +253,6 @@ export default function DashboardPage() {
               sheetName={selectedMonth}
               onStepDeleted={handleStepDeleted}
               onStepAdded={handleStepAdded}
-              onRefresh={handleRefresh}
             />
           </>
         )}
