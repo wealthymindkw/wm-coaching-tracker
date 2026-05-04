@@ -97,20 +97,24 @@ export async function deleteStep(sheetName: string, rowIndex: number): Promise<v
 
 export async function createMonthSheet(sheetName: string): Promise<void> {
   const sheets = google.sheets({ version: "v4", auth: getAuth() });
-  await sheets.spreadsheets.batchUpdate({
-    spreadsheetId: SPREADSHEET_ID,
-    requestBody: {
-      requests: [{ addSheet: { properties: { title: sheetName } } }],
-    },
-  });
-  await sheets.spreadsheets.values.update({
-    spreadsheetId: SPREADSHEET_ID,
-    range: `'${sheetName}'!A1:H1`,
-    valueInputOption: "USER_ENTERED",
-    requestBody: {
-      values: [["Date", "Time", "UserID", "Username", "FirstName", "LastName", "Step", "Results"]],
-    },
-  });
+  try {
+    await sheets.spreadsheets.batchUpdate({
+      spreadsheetId: SPREADSHEET_ID,
+      requestBody: {
+        requests: [{ addSheet: { properties: { title: sheetName } } }],
+      },
+    });
+    await sheets.spreadsheets.values.update({
+      spreadsheetId: SPREADSHEET_ID,
+      range: `'${sheetName}'!A1:H1`,
+      valueInputOption: "USER_ENTERED",
+      requestBody: {
+        values: [["Date", "Time", "User ID", "Username", "First Name", "Last Name", "Step", "Results"]],
+      },
+    });
+  } catch {
+    // Sheet already exists — do nothing, preserve existing data
+  }
 }
 
 export async function addStep(

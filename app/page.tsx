@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import {
   Activity, Users, TrendingUp, Calendar,
   RefreshCw, ChevronDown, Star, Loader2,
@@ -139,10 +139,27 @@ export default function DashboardPage() {
     setMembers(buildStats(newRows));
   }
 
-  function handleStepAdded(row: Omit<StepRow, "rowIndex">) {
-    // Reload to get correct row index from sheets
+  function handleStepAdded(_row: Omit<StepRow, "rowIndex">) {
     loadData(selectedMonth);
   }
+
+  // Auto-fix rows that have empty names due to previously wrong sheet headers.
+  // Runs once per month per session; no-ops if all names are already correct.
+  const fixedMonths = useRef(new Set<string>());
+  useEffect(() => {
+    if (!selectedMonth || fixedMonths.current.has(selectedMonth)) return;
+    const needsFix = rows.some((r) => (!r.firstName && r.username) || (!r.userId && r.firstName));
+    if (!needsFix) return;
+    fixedMonths.current.add(selectedMonth);
+    fetch("/api/admin/fix-names", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ sheet: selectedMonth }),
+    })
+      .then((r) => r.json())
+      .then((data) => { if (data.fixed > 0) loadData(selectedMonth); })
+      .catch(() => {});
+  }, [rows, selectedMonth, loadData]);
 
   const selectedMember = selectedMemberKey
     ? members.find((m) => (m.userId || m.username || m.firstName) === selectedMemberKey) ?? null
