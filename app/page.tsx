@@ -9,7 +9,6 @@ import { clsx } from "clsx";
 import { KpiCard } from "@/components/KpiCard";
 import { Leaderboard } from "@/components/Leaderboard";
 import { StepsPanel } from "@/components/StepsPanel";
-import { AdminLogPanel } from "@/components/AdminLogPanel";
 import type { StepRow, MemberStats } from "@/lib/types";
 
 // ─── Stats ───────────────────────────────────────────────────────────────────
@@ -248,12 +247,6 @@ export default function DashboardPage() {
               />
             )}
 
-            <AdminLogPanel
-              rows={rows}
-              sheetName={selectedMonth}
-              onStepDeleted={handleStepDeleted}
-              onStepAdded={handleStepAdded}
-            />
           </>
         )}
       </main>
