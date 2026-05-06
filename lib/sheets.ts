@@ -104,13 +104,12 @@ export async function createMonthSheet(sheetName: string): Promise<void> {
         requests: [{ addSheet: { properties: { title: sheetName } } }],
       },
     });
-    // Sheet is newly created — write headers
     await sheets.spreadsheets.values.update({
       spreadsheetId: SPREADSHEET_ID,
       range: `'${sheetName}'!A1:H1`,
       valueInputOption: "USER_ENTERED",
       requestBody: {
-        values: [["Date", "Time", "UserID", "Username", "FirstName", "LastName", "Step", "Results"]],
+        values: [["Date", "Time", "User ID", "Username", "First Name", "Last Name", "Step", "Results"]],
       },
     });
   } catch {
