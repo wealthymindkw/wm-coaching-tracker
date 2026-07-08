@@ -59,31 +59,35 @@ function wm_prognav($current) {
     $ancestors = get_post_ancestors($current);
     $html      = '<nav class="wm-prognav" aria-label="أقسام البرنامج">';
 
-    $cls   = ($current === $root) ? ' class="is-active"' : '';
-    $html .= '<a href="' . esc_url(get_permalink($root)) . '"' . $cls . '>' . wm_chev()
+    $cls   = ($current === $root) ? ' is-active' : '';
+    $html .= '<a class="wm-top' . $cls . '" href="' . esc_url(get_permalink($root)) . '">' . wm_chev()
         . '<span>الصفحة الرئيسية للبرنامج</span></a>';
 
     foreach (wm_pages_sorted($root) as $sec) {
         $open  = ($current === $sec->ID) || in_array($sec->ID, $ancestors, true);
-        $cls   = 'wm-sec' . ($open ? ' is-open' : '') . (($current === $sec->ID) ? ' is-active' : '');
-        $html .= '<a href="' . esc_url(get_permalink($sec)) . '" class="' . $cls . '">' . wm_chev()
-            . '<span>' . esc_html(get_the_title($sec)) . '</span></a>';
-
-        if ($open) {
-            $lessons = wm_pages_sorted($sec->ID);
-            if ($lessons) {
-                $html .= '<div class="wm-sub">';
-                foreach ($lessons as $les) {
-                    $cls   = ($current === $les->ID) ? ' class="is-active"' : '';
-                    $html .= '<a href="' . esc_url(get_permalink($les)) . '"' . $cls . '>' . wm_chev()
-                        . '<span>' . esc_html(get_the_title($les)) . '</span></a>';
-                }
-                $html .= '</div>';
-            }
+        $html .= '<div class="wm-acc' . ($open ? ' is-open' : '') . '">';
+        $html .= '<button type="button" class="wm-acc-h" aria-expanded="' . ($open ? 'true' : 'false') . '">'
+            . wm_chev() . '<span>' . esc_html(get_the_title($sec)) . '</span></button>';
+        $html .= '<div class="wm-acc-p">';
+        foreach (wm_pages_sorted($sec->ID) as $les) {
+            $cls   = ($current === $les->ID) ? ' class="is-active"' : '';
+            $html .= '<a href="' . esc_url(get_permalink($les)) . '"' . $cls . '>' . wm_chev()
+                . '<span>' . esc_html(get_the_title($les)) . '</span></a>';
         }
+        $html .= '</div></div>';
     }
-    return $html . '</nav>';
+    $html .= '</nav>';
+    $html .= '<script>document.querySelectorAll(".wm-prognav .wm-acc-h").forEach(function(b){'
+        . 'b.addEventListener("click",function(){var w=b.parentNode,o=w.classList.toggle("is-open");'
+        . 'b.setAttribute("aria-expanded",o?"true":"false");});});</script>';
+    return $html;
 }
+
+/* كلاس على body داخل شجرة البرنامج — لفك قيد عرض wm-clean-layout */
+add_filter('body_class', function ($classes) {
+    if (is_page() && wm_in_program(get_the_ID())) $classes[] = 'wm-program';
+    return $classes;
+});
 
 add_filter('the_content', function ($content) {
     if (is_admin() || !is_page() || !in_the_loop() || !is_main_query()) return $content;
@@ -135,15 +139,22 @@ button.menu-toggle{color:var(--wm-navy) !important}
 .entry-header{display:none}
 
 /* تخطيط البرنامج: محتوى + قائمة جانبية */
+body.wm-program .site-main{max-width:1160px !important;margin:0 auto !important}
+.wm-main > div[style]{max-width:none !important;margin:0 !important}
 .wm-layout{display:flex;gap:44px;align-items:flex-start}
 .wm-main{flex:1 1 auto;min-width:0}
-.wm-side{flex:0 0 300px;max-width:300px}
+.wm-side{flex:0 0 300px;max-width:300px;position:sticky;top:24px}
+
+/* القائمة الجانبية — أكورديون */
 .wm-prognav{border-top:2px solid var(--wm-line)}
-.wm-prognav a{display:flex;align-items:center;gap:9px;padding:13px 4px;border-bottom:1px solid var(--wm-line);color:var(--wm-navy);text-decoration:none;font-weight:600;font-size:.94em;line-height:1.5;transition:color .12s ease}
-.wm-prognav a:hover{color:var(--wm-gold)}
+.wm-prognav a,.wm-prognav .wm-acc-h{display:flex;align-items:center;gap:9px;width:100%;box-sizing:border-box;padding:13px 4px;margin:0;border:0;border-bottom:1px solid var(--wm-line);border-radius:0;background:none;color:var(--wm-navy);text-decoration:none;font-weight:600;font-size:.94em;line-height:1.5;cursor:pointer;text-align:right;font-family:inherit;transition:color .12s ease}
+.wm-prognav a:hover,.wm-prognav .wm-acc-h:hover{color:var(--wm-gold);background:none}
 .wm-prognav a.is-active{color:var(--wm-blue);font-weight:800}
-.wm-prognav .wm-chev{flex:0 0 auto;color:var(--wm-gold)}
-.wm-sub a{padding-right:28px;font-weight:500;font-size:.88em;background:#fafbfc}
+.wm-prognav .wm-chev{flex:0 0 auto;color:var(--wm-gold);transition:transform .18s ease}
+.wm-acc.is-open > .wm-acc-h .wm-chev{transform:rotate(-90deg)}
+.wm-acc-p{display:none}
+.wm-acc.is-open .wm-acc-p{display:block}
+.wm-acc-p a{padding-right:30px;font-weight:500;font-size:.88em;background:#fafbfc}
 
 /* بانرات صفحة البرامج */
 .wm-banner{transition:transform .15s ease,box-shadow .15s ease}
@@ -151,7 +162,7 @@ a.wm-banner:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(11,31,5
 
 @media (max-width:920px){
   .wm-layout{flex-direction:column;gap:34px}
-  .wm-side{flex:1 1 auto;max-width:none;width:100%}
+  .wm-side{flex:1 1 auto;max-width:none;width:100%;position:static}
   .site-content{padding:26px 18px 48px}
   .wm-hero-in{padding:24px 18px}
   .site-header .inside-header{padding:12px 18px !important}
