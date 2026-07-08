@@ -1,0 +1,677 @@
+[
+ {
+  "id": 115,
+  "slug": "my-account",
+  "title": {
+   "raw": "حسابي",
+   "rendered": "حسابي"
+  },
+  "content": {
+   "raw": "[wm_account]",
+   "rendered": "    <div style=\"max-width:640px;margin:0 auto;\">\n            <div style=\"background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:26px;margin-bottom:20px;box-shadow:0 2px 12px rgba(11,31,58,.06);display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;\">\n        <div>\n          <div style=\"font-weight:800;color:#0B1F3A;font-size:1.2em;\">wm_admin</div>\n          <div style=\"color:#6b7280;font-size:.9em;margin-top:4px;\">admin@wealthymindkw.com</div>\n        </div>\n        <span style=\"background:#dcfce7;color:#166534;padding:4px 12px;border-radius:20px;font-weight:700;font-size:.85em;\">● عضوية فعّالة</span>      </div>\n\n      <form method=\"post\" style=\"background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:26px;margin-bottom:20px;box-shadow:0 2px 12px rgba(11,31,58,.06);\">\n        <h3 style=\"color:#0B1F3A;margin:0 0 18px;font-size:1.15em;border-bottom:2px solid #C9A227;display:inline-block;padding-bottom:6px;\">المعلومات الشخصية</h3>\n        <p><label style=\"font-weight:700;color:#0B1F3A;display:block;\">الاسم الأول</label>\n           <input style=\"width:100%;box-sizing:border-box;border:1.5px solid #d1d5db;border-radius:10px;padding:11px 13px;font-size:1em;font-family:inherit;margin-top:6px;\" type=\"text\" name=\"first_name\" value=\"\"></p>\n        <p><label style=\"font-weight:700;color:#0B1F3A;display:block;\">الاسم الأخير</label>\n           <input style=\"width:100%;box-sizing:border-box;border:1.5px solid #d1d5db;border-radius:10px;padding:11px 13px;font-size:1em;font-family:inherit;margin-top:6px;\" type=\"text\" name=\"last_name\" value=\"\"></p>\n        <p><label style=\"font-weight:700;color:#0B1F3A;display:block;\">البريد الإلكتروني</label>\n           <input style=\"width:100%;box-sizing:border-box;border:1.5px solid #d1d5db;border-radius:10px;padding:11px 13px;font-size:1em;font-family:inherit;margin-top:6px;background:#f3f4f6;color:#6b7280;\" type=\"text\" value=\"admin@wealthymindkw.com\" disabled>\n           <span style=\"color:#9ca3af;font-size:.8em;\">لتغيير البريد تواصل مع الإدارة</span></p>\n\n        <h3 style=\"color:#0B1F3A;margin:0 0 18px;font-size:1.15em;border-bottom:2px solid #C9A227;display:inline-block;padding-bottom:6px;margin-top:14px;\">تغيير كلمة المرور</h3>\n        <p style=\"color:#6b7280;font-size:.88em;margin-top:0;\">اتركها فارغة إذا ما تبي تغيّرها.</p>\n        <p><label style=\"font-weight:700;color:#0B1F3A;display:block;\">كلمة المرور الحالية</label>\n           <input style=\"width:100%;box-sizing:border-box;border:1.5px solid #d1d5db;border-radius:10px;padding:11px 13px;font-size:1em;font-family:inherit;margin-top:6px;\" type=\"password\" name=\"cur_pass\" autocomplete=\"current-password\"></p>\n        <p><label style=\"font-weight:700;color:#0B1F3A;display:block;\">كلمة المرور الجديدة</label>\n           <input style=\"width:100%;box-sizing:border-box;border:1.5px solid #d1d5db;border-radius:10px;padding:11px 13px;font-size:1em;font-family:inherit;margin-top:6px;\" type=\"password\" name=\"new_pass\" autocomplete=\"new-password\"></p>\n        <p><label style=\"font-weight:700;color:#0B1F3A;display:block;\">تأكيد كلمة المرور الجديدة</label>\n           <input style=\"width:100%;box-sizing:border-box;border:1.5px solid #d1d5db;border-radius:10px;padding:11px 13px;font-size:1em;font-family:inherit;margin-top:6px;\" type=\"password\" name=\"new_pass2\" autocomplete=\"new-password\"></p>\n\n        <input type=\"hidden\" name=\"wm_acc_nonce\" value=\"58862d2ea1\">\n        <button type=\"submit\" style=\"background:#C9A227;color:#0B1F3A;border:none;border-radius:10px;padding:12px 30px;font-weight:800;font-size:1em;cursor:pointer;font-family:inherit;\">حفظ التغييرات</button>\n      </form>\n    </div>\n    \n",
+   "protected": false,
+   "block_version": 0
+  },
+  "parent": 0
+ },
+ {
+  "id": 111,
+  "slug": "programs",
+  "title": {
+   "raw": "برامجي",
+   "rendered": "برامجي"
+  },
+  "content": {
+   "raw": "<!-- wp:html -->\n<div class=\"wm-programs\" style=\"max-width:980px;margin:0 auto;\">\n  <p style=\"color:#4b5563;font-size:1.05em;margin:0 0 26px;\">حياك الله في بوابة <strong>Wealthy Mind</strong> 👋 — هذي برامجك، اختر البرنامج اللي تبي تدخله:</p>\n\n  <h2 style=\"font-size:1.2em;color:#0B1F3A;border-bottom:3px solid #C9A227;display:inline-block;padding-bottom:6px;margin:0 0 18px;\">برامج الكوتشينج</h2>\n\n  <a href=\"/dashboard/\" class=\"wm-banner\" style=\"display:block;position:relative;border-radius:16px;overflow:hidden;text-decoration:none;min-height:170px;box-shadow:0 6px 18px rgba(11,31,58,.18);margin:0 0 18px;background:linear-gradient(120deg,#0B1F3A 0%,#16406e 60%,#1d5b9e 100%);\">\n    <span style=\"position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;\">\n      <span style=\"color:#C9A227;font-size:.85em;letter-spacing:2px;\">WEALTHY MIND</span>\n      <span style=\"color:#fff;font-size:1.7em;font-weight:800;margin-top:6px;\">الكوتشينج الاستشاري</span>\n      <span style=\"color:#cbd5e1;font-size:.95em;margin-top:8px;\">٦ أقسام · ٣٥ درساً</span>\n    </span>\n  </a>\n\n  <h2 style=\"font-size:1.2em;color:#0B1F3A;border-bottom:3px solid #C9A227;display:inline-block;padding-bottom:6px;margin:22px 0 18px;\">قريباً</h2>\n\n  <div class=\"wm-banner\" style=\"display:block;position:relative;border-radius:16px;overflow:hidden;text-decoration:none;min-height:170px;box-shadow:0 6px 18px rgba(11,31,58,.18);margin:0 0 18px;background:linear-gradient(120deg,#374151,#6b7280);opacity:.55;\">\n    <span style=\"position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;\">\n      <span style=\"color:#fff;font-size:1.35em;font-weight:700;\">برنامج جديد</span>\n      <span style=\"color:#e5e7eb;font-size:.9em;margin-top:6px;\">يُعلن عنه قريباً 🔒</span>\n    </span>\n  </div>\n</div><!-- /wp:html -->",
+   "rendered": "\n<div class=\"wm-programs\" style=\"max-width:980px;margin:0 auto;\">\n  <p style=\"color:#4b5563;font-size:1.05em;margin:0 0 26px;\">حياك الله في بوابة <strong>Wealthy Mind</strong> 👋 — هذي برامجك، اختر البرنامج اللي تبي تدخله:</p>\n\n  <h2 style=\"font-size:1.2em;color:#0B1F3A;border-bottom:3px solid #C9A227;display:inline-block;padding-bottom:6px;margin:0 0 18px;\">برامج الكوتشينج</h2>\n\n  <a href=\"/dashboard/\" class=\"wm-banner\" style=\"display:block;position:relative;border-radius:16px;overflow:hidden;text-decoration:none;min-height:170px;box-shadow:0 6px 18px rgba(11,31,58,.18);margin:0 0 18px;background:linear-gradient(120deg,#0B1F3A 0%,#16406e 60%,#1d5b9e 100%);\">\n    <span style=\"position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px;\">\n      <span style=\"color:#C9A227;font-size:.85em;letter-spacing:2px;\">WEALTHY MIND</span>\n      <span style=\"color:#fff;font-size:1.7em;font-weight:800;margin-top:6px;\">الكوتشينج الاستشاري</span>\n      <span style=\"color:#cbd5e1;font-size:.95em;margin-top:8px;\">٦ أقسام · ٣٥ درساً</span>\n    </span>\n  </a>\n\n  <h2 style=\"font-size:1.2em;color:#0B1F3A;border-bottom:3px solid #C9A227;display:inline-block;padding-bottom:6px;margin:22px 0 18px;\">قريباً</h2>\n\n  <div class=\"wm-banner\" style=\"display:block;position:relative;border-radius:16px;overflow:hidden;text-decoration:none;min-height:170px;box-shadow:0 6px 18px rgba(11,31,58,.18);margin:0 0 18px;background:linear-gradient(120deg,#374151,#6b7280);opacity:.55;\">\n    <span style=\"position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;\">\n      <span style=\"color:#fff;font-size:1.35em;font-weight:700;\">برنامج جديد</span>\n      <span style=\"color:#e5e7eb;font-size:.9em;margin-top:6px;\">يُعلن عنه قريباً 🔒</span>\n    </span>\n  </div>\n</div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 0
+ },
+ {
+  "id": 61,
+  "slug": "contact-wmc",
+  "title": {
+   "raw": "تواصل مع إدارة WMC",
+   "rendered": "تواصل مع إدارة WMC"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/extras/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المكتبة الإضافية</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/extras/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المكتبة الإضافية</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 26
+ },
+ {
+  "id": 60,
+  "slug": "conscious-marketing",
+  "title": {
+   "raw": "رحلة التسويق الواعي للمدربين مع عمرة عبدالله",
+   "rendered": "رحلة التسويق الواعي للمدربين مع عمرة عبدالله"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/extras/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المكتبة الإضافية</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/extras/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المكتبة الإضافية</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 26
+ },
+ {
+  "id": 59,
+  "slug": "wealth-challenge",
+  "title": {
+   "raw": "تحدي فعّل مشاعر الثراء",
+   "rendered": "تحدي فعّل مشاعر الثراء"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/extras/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المكتبة الإضافية</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/extras/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المكتبة الإضافية</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 26
+ },
+ {
+  "id": 58,
+  "slug": "excellence-circle",
+  "title": {
+   "raw": "برنامج دائرة التميز",
+   "rendered": "برنامج دائرة التميز"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/extras/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المكتبة الإضافية</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/extras/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المكتبة الإضافية</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 26
+ },
+ {
+  "id": 57,
+  "slug": "prospecting",
+  "title": {
+   "raw": "Prospecting & Follow up — المتابعة والتنقيب",
+   "rendered": "Prospecting &#038; Follow up — المتابعة والتنقيب"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/sales-saja/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المبيعات مع سجى</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/sales-saja/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المبيعات مع سجى</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 25
+ },
+ {
+  "id": 56,
+  "slug": "roleplay-saleh",
+  "title": {
+   "raw": "رول بلاي — سجى وصالح",
+   "rendered": "رول بلاي — سجى وصالح"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/sales-saja/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المبيعات مع سجى</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/sales-saja/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المبيعات مع سجى</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 25
+ },
+ {
+  "id": 55,
+  "slug": "two-part-call",
+  "title": {
+   "raw": "نموذج مكالمة على جزئين — سجى وحمد",
+   "rendered": "نموذج مكالمة على جزئين — سجى وحمد"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/sales-saja/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المبيعات مع سجى</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/sales-saja/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المبيعات مع سجى</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 25
+ },
+ {
+  "id": 54,
+  "slug": "objections",
+  "title": {
+   "raw": "التعامل مع الاعتراضات",
+   "rendered": "التعامل مع الاعتراضات"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/sales-saja/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المبيعات مع سجى</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/sales-saja/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المبيعات مع سجى</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 25
+ },
+ {
+  "id": 53,
+  "slug": "call-steps",
+  "title": {
+   "raw": "خطوات المكالمة البيعية",
+   "rendered": "خطوات المكالمة البيعية"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/sales-saja/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المبيعات مع سجى</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/sales-saja/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المبيعات مع سجى</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 25
+ },
+ {
+  "id": 52,
+  "slug": "roleplay-juhaina",
+  "title": {
+   "raw": "رول بلاي — سجى وجهينة",
+   "rendered": "رول بلاي — سجى وجهينة"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/sales-saja/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المبيعات مع سجى</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/sales-saja/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المبيعات مع سجى</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 25
+ },
+ {
+  "id": 51,
+  "slug": "million-script-saja",
+  "title": {
+   "raw": "سكريبت المليون — مع سجى",
+   "rendered": "سكريبت المليون — مع سجى"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/sales-saja/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المبيعات مع سجى</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/sales-saja/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى المبيعات مع سجى</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 25
+ },
+ {
+  "id": 50,
+  "slug": "sales-training",
+  "title": {
+   "raw": "تدريبات البيع مع حمد الفيلكاوي",
+   "rendered": "تدريبات البيع مع حمد الفيلكاوي"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/coach-training/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى تدريب المدربين</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/coach-training/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى تدريب المدربين</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 24
+ },
+ {
+  "id": 49,
+  "slug": "path-to-agreement",
+  "title": {
+   "raw": "طريق الاتفاق مع حمد الفيلكاوي",
+   "rendered": "طريق الاتفاق مع حمد الفيلكاوي"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/coach-training/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى تدريب المدربين</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/coach-training/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى تدريب المدربين</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 24
+ },
+ {
+  "id": 48,
+  "slug": "sessions",
+  "title": {
+   "raw": "تدريب المدربين",
+   "rendered": "تدريب المدربين"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/coach-training/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى تدريب المدربين</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/coach-training/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى تدريب المدربين</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 24
+ },
+ {
+  "id": 47,
+  "slug": "calls",
+  "title": {
+   "raw": "المكالمات المسجلة والقادمة",
+   "rendered": "المكالمات المسجلة والقادمة"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/coach-training/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى تدريب المدربين</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/coach-training/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى تدريب المدربين</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 24
+ },
+ {
+  "id": 46,
+  "slug": "self-development",
+  "title": {
+   "raw": "أدوات تطوير الذات للمدربين",
+   "rendered": "أدوات تطوير الذات للمدربين"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/business/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى إدارة مشروعك التدريبي</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/business/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى إدارة مشروعك التدريبي</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 23
+ },
+ {
+  "id": 45,
+  "slug": "client-tools",
+  "title": {
+   "raw": "أدوات ونصائح مخصصة للعملاء",
+   "rendered": "أدوات ونصائح مخصصة للعملاء"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/business/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى إدارة مشروعك التدريبي</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/business/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى إدارة مشروعك التدريبي</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 23
+ },
+ {
+  "id": 44,
+  "slug": "prospect-tools",
+  "title": {
+   "raw": "أدوات ونصائح للتواصل مع العملاء المحتملين",
+   "rendered": "أدوات ونصائح للتواصل مع العملاء المحتملين"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/business/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى إدارة مشروعك التدريبي</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/business/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى إدارة مشروعك التدريبي</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 23
+ },
+ {
+  "id": 43,
+  "slug": "my-clients-portal",
+  "title": {
+   "raw": "بوابة عملائي",
+   "rendered": "بوابة عملائي"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/business/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى إدارة مشروعك التدريبي</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/business/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى إدارة مشروعك التدريبي</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 23
+ },
+ {
+  "id": 42,
+  "slug": "lesson-12",
+  "title": {
+   "raw": "الدرس الثاني عشر: تعظيم العقل",
+   "rendered": "الدرس الثاني عشر: تعظيم العقل"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 22
+ },
+ {
+  "id": 41,
+  "slug": "lesson-11",
+  "title": {
+   "raw": "الدرس الحادي عشر: اترك في الناس شعورًا بالارتقاء",
+   "rendered": "الدرس الحادي عشر: اترك في الناس شعورًا بالارتقاء"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 22
+ },
+ {
+  "id": 40,
+  "slug": "lesson-10",
+  "title": {
+   "raw": "الدرس العاشر: الشخص الأعلى قيمة",
+   "rendered": "الدرس العاشر: الشخص الأعلى قيمة"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 22
+ },
+ {
+  "id": 39,
+  "slug": "lesson-9",
+  "title": {
+   "raw": "الدرس التاسع: الكلمة السحرية",
+   "rendered": "الدرس التاسع: الكلمة السحرية"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 22
+ },
+ {
+  "id": 38,
+  "slug": "lesson-8",
+  "title": {
+   "raw": "الدرس الثامن: قوة الإيمان",
+   "rendered": "الدرس الثامن: قوة الإيمان"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 22
+ },
+ {
+  "id": 37,
+  "slug": "lesson-7",
+  "title": {
+   "raw": "الدرس السابع: حاجز الرهبة",
+   "rendered": "الدرس السابع: حاجز الرهبة"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 22
+ },
+ {
+  "id": 36,
+  "slug": "lesson-6",
+  "title": {
+   "raw": "الدرس السادس: الصورة الذاتية",
+   "rendered": "الدرس السادس: الصورة الذاتية"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 22
+ },
+ {
+  "id": 35,
+  "slug": "lesson-5",
+  "title": {
+   "raw": "الدرس الخامس: من التفكير إلى النتائج",
+   "rendered": "الدرس الخامس: من التفكير إلى النتائج"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 22
+ },
+ {
+  "id": 34,
+  "slug": "lesson-4",
+  "title": {
+   "raw": "الدرس الرابع: المارد السحري",
+   "rendered": "الدرس الرابع: المارد السحري"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 22
+ },
+ {
+  "id": 33,
+  "slug": "lesson-3",
+  "title": {
+   "raw": "الدرس الثالث: العقل اللانهائي",
+   "rendered": "الدرس الثالث: العقل اللانهائي"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 22
+ },
+ {
+  "id": 32,
+  "slug": "lesson-2",
+  "title": {
+   "raw": "الدرس الثاني: فجوة المعرفة",
+   "rendered": "الدرس الثاني: فجوة المعرفة"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 22
+ },
+ {
+  "id": 31,
+  "slug": "lesson-1",
+  "title": {
+   "raw": "الدرس الأول: الهدف السامي",
+   "rendered": "الدرس الأول: الهدف السامي"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 22
+ },
+ {
+  "id": 30,
+  "slug": "overview",
+  "title": {
+   "raw": "ميتافكر — نظرة عامة",
+   "rendered": "ميتافكر — نظرة عامة"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/metafiker/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى دروس ميتافكر</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 22
+ },
+ {
+  "id": 29,
+  "slug": "get-certified",
+  "title": {
+   "raw": "احصل على الاعتماد",
+   "rendered": "احصل على الاعتماد"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/start/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى البداية والتأسيس</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/start/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى البداية والتأسيس</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 21
+ },
+ {
+  "id": 28,
+  "slug": "start-here",
+  "title": {
+   "raw": "ابدأ هنا",
+   "rendered": "ابدأ هنا"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/start/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى البداية والتأسيس</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/start/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى البداية والتأسيس</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 21
+ },
+ {
+  "id": 27,
+  "slug": "welcome",
+  "title": {
+   "raw": "مرحباً",
+   "rendered": "مرحباً"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/start/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى البداية والتأسيس</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/start/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى البداية والتأسيس</a></p><div style=\"background:#0f172a;color:#cbd5e1;border-radius:14px;padding:56px 20px;text-align:center;margin:18px 0;\"><span style=\"font-size:2.2em;display:block;\">🎬</span><span style=\"display:block;margin-top:8px;\">الفيديو راح يُضاف هنا قريباً</span></div><h3>عن هذا الدرس</h3><p>الوصف والملاحظات تُضاف هنا.</p></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 21
+ },
+ {
+  "id": 26,
+  "slug": "extras",
+  "title": {
+   "raw": "📚 المكتبة الإضافية",
+   "rendered": "📚 المكتبة الإضافية"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى لوحة العميل</a></p><a href=\"/dashboard/extras/excellence-circle/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 برنامج دائرة التميز</a><a href=\"/dashboard/extras/wealth-challenge/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 تحدي فعّل مشاعر الثراء</a><a href=\"/dashboard/extras/conscious-marketing/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 رحلة التسويق الواعي للمدربين مع عمرة عبدالله</a><a href=\"/dashboard/extras/contact-wmc/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 تواصل مع إدارة WMC</a></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى لوحة العميل</a></p><a href=\"/dashboard/extras/excellence-circle/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 برنامج دائرة التميز</a><a href=\"/dashboard/extras/wealth-challenge/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 تحدي فعّل مشاعر الثراء</a><a href=\"/dashboard/extras/conscious-marketing/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 رحلة التسويق الواعي للمدربين مع عمرة عبدالله</a><a href=\"/dashboard/extras/contact-wmc/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 تواصل مع إدارة WMC</a></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 20
+ },
+ {
+  "id": 25,
+  "slug": "sales-saja",
+  "title": {
+   "raw": "📞 المبيعات مع سجى",
+   "rendered": "📞 المبيعات مع سجى"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى لوحة العميل</a></p><a href=\"/dashboard/sales-saja/million-script-saja/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 سكريبت المليون — مع سجى</a><a href=\"/dashboard/sales-saja/roleplay-juhaina/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 رول بلاي — سجى وجهينة</a><a href=\"/dashboard/sales-saja/call-steps/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 خطوات المكالمة البيعية</a><a href=\"/dashboard/sales-saja/objections/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 التعامل مع الاعتراضات</a><a href=\"/dashboard/sales-saja/two-part-call/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 نموذج مكالمة على جزئين — سجى وحمد</a><a href=\"/dashboard/sales-saja/roleplay-saleh/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 رول بلاي — سجى وصالح</a><a href=\"/dashboard/sales-saja/prospecting/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 Prospecting & Follow up — المتابعة والتنقيب</a></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى لوحة العميل</a></p><a href=\"/dashboard/sales-saja/million-script-saja/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 سكريبت المليون — مع سجى</a><a href=\"/dashboard/sales-saja/roleplay-juhaina/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 رول بلاي — سجى وجهينة</a><a href=\"/dashboard/sales-saja/call-steps/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 خطوات المكالمة البيعية</a><a href=\"/dashboard/sales-saja/objections/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 التعامل مع الاعتراضات</a><a href=\"/dashboard/sales-saja/two-part-call/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 نموذج مكالمة على جزئين — سجى وحمد</a><a href=\"/dashboard/sales-saja/roleplay-saleh/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 رول بلاي — سجى وصالح</a><a href=\"/dashboard/sales-saja/prospecting/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 Prospecting &#038; Follow up — المتابعة والتنقيب</a></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 20
+ },
+ {
+  "id": 24,
+  "slug": "coach-training",
+  "title": {
+   "raw": "🎯 تدريب المدربين",
+   "rendered": "🎯 تدريب المدربين"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى لوحة العميل</a></p><a href=\"/dashboard/coach-training/calls/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 المكالمات المسجلة والقادمة</a><a href=\"/dashboard/coach-training/sessions/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 تدريب المدربين</a><a href=\"/dashboard/coach-training/path-to-agreement/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 طريق الاتفاق مع حمد الفيلكاوي</a><a href=\"/dashboard/coach-training/sales-training/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 تدريبات البيع مع حمد الفيلكاوي</a></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى لوحة العميل</a></p><a href=\"/dashboard/coach-training/calls/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 المكالمات المسجلة والقادمة</a><a href=\"/dashboard/coach-training/sessions/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 تدريب المدربين</a><a href=\"/dashboard/coach-training/path-to-agreement/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 طريق الاتفاق مع حمد الفيلكاوي</a><a href=\"/dashboard/coach-training/sales-training/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 تدريبات البيع مع حمد الفيلكاوي</a></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 20
+ },
+ {
+  "id": 23,
+  "slug": "business",
+  "title": {
+   "raw": "💼 إدارة مشروعك التدريبي",
+   "rendered": "💼 إدارة مشروعك التدريبي"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى لوحة العميل</a></p><a href=\"/dashboard/business/my-clients-portal/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 بوابة عملائي</a><a href=\"/dashboard/business/prospect-tools/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 أدوات ونصائح للتواصل مع العملاء المحتملين</a><a href=\"/dashboard/business/client-tools/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 أدوات ونصائح مخصصة للعملاء</a><a href=\"/dashboard/business/self-development/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 أدوات تطوير الذات للمدربين</a></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى لوحة العميل</a></p><a href=\"/dashboard/business/my-clients-portal/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 بوابة عملائي</a><a href=\"/dashboard/business/prospect-tools/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 أدوات ونصائح للتواصل مع العملاء المحتملين</a><a href=\"/dashboard/business/client-tools/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 أدوات ونصائح مخصصة للعملاء</a><a href=\"/dashboard/business/self-development/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 أدوات تطوير الذات للمدربين</a></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 20
+ },
+ {
+  "id": 22,
+  "slug": "metafiker",
+  "title": {
+   "raw": "🧠 دروس ميتافكر",
+   "rendered": "🧠 دروس ميتافكر"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى لوحة العميل</a></p><a href=\"/dashboard/metafiker/overview/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 ميتافكر — نظرة عامة</a><a href=\"/dashboard/metafiker/lesson-1/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس الأول: الهدف السامي</a><a href=\"/dashboard/metafiker/lesson-2/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس الثاني: فجوة المعرفة</a><a href=\"/dashboard/metafiker/lesson-3/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس الثالث: العقل اللانهائي</a><a href=\"/dashboard/metafiker/lesson-4/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس الرابع: المارد السحري</a><a href=\"/dashboard/metafiker/lesson-5/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس الخامس: من التفكير إلى النتائج</a><a href=\"/dashboard/metafiker/lesson-6/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس السادس: الصورة الذاتية</a><a href=\"/dashboard/metafiker/lesson-7/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس السابع: حاجز الرهبة</a><a href=\"/dashboard/metafiker/lesson-8/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس الثامن: قوة الإيمان</a><a href=\"/dashboard/metafiker/lesson-9/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس التاسع: الكلمة السحرية</a><a href=\"/dashboard/metafiker/lesson-10/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس العاشر: الشخص الأعلى قيمة</a><a href=\"/dashboard/metafiker/lesson-11/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس الحادي عشر: اترك في الناس شعورًا بالارتقاء</a><a href=\"/dashboard/metafiker/lesson-12/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس الثاني عشر: تعظيم العقل</a></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى لوحة العميل</a></p><a href=\"/dashboard/metafiker/overview/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 ميتافكر — نظرة عامة</a><a href=\"/dashboard/metafiker/lesson-1/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس الأول: الهدف السامي</a><a href=\"/dashboard/metafiker/lesson-2/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس الثاني: فجوة المعرفة</a><a href=\"/dashboard/metafiker/lesson-3/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس الثالث: العقل اللانهائي</a><a href=\"/dashboard/metafiker/lesson-4/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس الرابع: المارد السحري</a><a href=\"/dashboard/metafiker/lesson-5/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس الخامس: من التفكير إلى النتائج</a><a href=\"/dashboard/metafiker/lesson-6/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس السادس: الصورة الذاتية</a><a href=\"/dashboard/metafiker/lesson-7/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس السابع: حاجز الرهبة</a><a href=\"/dashboard/metafiker/lesson-8/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس الثامن: قوة الإيمان</a><a href=\"/dashboard/metafiker/lesson-9/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس التاسع: الكلمة السحرية</a><a href=\"/dashboard/metafiker/lesson-10/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس العاشر: الشخص الأعلى قيمة</a><a href=\"/dashboard/metafiker/lesson-11/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس الحادي عشر: اترك في الناس شعورًا بالارتقاء</a><a href=\"/dashboard/metafiker/lesson-12/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 الدرس الثاني عشر: تعظيم العقل</a></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 20
+ },
+ {
+  "id": 21,
+  "slug": "start",
+  "title": {
+   "raw": "🚀 البداية والتأسيس",
+   "rendered": "🚀 البداية والتأسيس"
+  },
+  "content": {
+   "raw": "<!-- wp:html --><div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى لوحة العميل</a></p><a href=\"/dashboard/start/welcome/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 مرحباً</a><a href=\"/dashboard/start/start-here/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 ابدأ هنا</a><a href=\"/dashboard/start/get-certified/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 احصل على الاعتماد</a></div><!-- /wp:html -->",
+   "rendered": "<div style=\"max-width:760px;margin:0 auto;\"><p style=\"margin:0 0 10px;\"><a href=\"/dashboard/\" style=\"color:#2563eb;text-decoration:none;\">← الرجوع إلى لوحة العميل</a></p><a href=\"/dashboard/start/welcome/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 مرحباً</a><a href=\"/dashboard/start/start-here/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 ابدأ هنا</a><a href=\"/dashboard/start/get-certified/\" style=\"display:block;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;margin:0 0 10px;text-decoration:none;color:#111;box-shadow:0 1px 2px rgba(0,0,0,.05);font-weight:600;\">🎬 احصل على الاعتماد</a></div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 20
+ },
+ {
+  "id": 20,
+  "slug": "dashboard",
+  "title": {
+   "raw": "الكوتشينج الاستشاري",
+   "rendered": "الكوتشينج الاستشاري"
+  },
+  "content": {
+   "raw": "<!-- wp:html -->\n<div>\n<div style=\"background:#0f172a;color:#cbd5e1;border-radius:16px;padding:0;margin:0 0 18px;position:relative;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(11,31,58,.15);\"><span style=\"text-align:center;\"><span style=\"font-size:3em;display:block;\">▶️</span><span style=\"display:block;margin-top:10px;color:#94a3b8;\">فيديو الترحيب — يُضاف هنا</span></span></div>\n<h2 style=\"color:#0B1F3A;margin:0 0 10px;\">حياك الله في برنامج الكوتشينج الاستشاري 👋</h2>\n<p style=\"color:#4b5563;\">مبروك انضمامك! هذا البرنامج راح ياخذك خطوة بخطوة — من التأسيس إلى إدارة مشروعك التدريبي واحتراف البيع. ابدأ من قسم <a href=\"/dashboard/start/\" style=\"color:#16406e;font-weight:700;\">«البداية والتأسيس»</a> وتدرّج مع الأقسام بالترتيب من القائمة الجانبية.</p>\n</div><!-- /wp:html -->",
+   "rendered": "\n<div>\n<div style=\"background:#0f172a;color:#cbd5e1;border-radius:16px;padding:0;margin:0 0 18px;position:relative;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(11,31,58,.15);\"><span style=\"text-align:center;\"><span style=\"font-size:3em;display:block;\">▶️</span><span style=\"display:block;margin-top:10px;color:#94a3b8;\">فيديو الترحيب — يُضاف هنا</span></span></div>\n<h2 style=\"color:#0B1F3A;margin:0 0 10px;\">حياك الله في برنامج الكوتشينج الاستشاري 👋</h2>\n<p style=\"color:#4b5563;\">مبروك انضمامك! هذا البرنامج راح ياخذك خطوة بخطوة — من التأسيس إلى إدارة مشروعك التدريبي واحتراف البيع. ابدأ من قسم <a href=\"/dashboard/start/\" style=\"color:#16406e;font-weight:700;\">«البداية والتأسيس»</a> وتدرّج مع الأقسام بالترتيب من القائمة الجانبية.</p>\n</div>",
+   "protected": false,
+   "block_version": 1
+  },
+  "parent": 0
+ },
+ {
+  "id": 4,
+  "slug": "subscription-expired",
+  "title": {
+   "raw": "انتهى اشتراكك",
+   "rendered": "انتهى اشتراكك"
+  },
+  "content": {
+   "raw": "<h2>انتهى اشتراكك</h2><p>عزيزي العميل، انتهت صلاحية وصولك للبورتال. للتجديد أو الاستفسار تواصل معنا وسيتم إعادة تفعيل حسابك بكل بياناتك.</p>",
+   "rendered": "<h2>انتهى اشتراكك</h2>\n<p>عزيزي العميل، انتهت صلاحية وصولك للبورتال. للتجديد أو الاستفسار تواصل معنا وسيتم إعادة تفعيل حسابك بكل بياناتك.</p>\n",
+   "protected": false,
+   "block_version": 0
+  },
+  "parent": 0
+ }
+]
