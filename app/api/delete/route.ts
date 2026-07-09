@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { deleteStep } from "@/lib/sheets";
+import { deleteStep, explainSheetsError } from "@/lib/sheets";
 
 export async function DELETE(req: NextRequest) {
   try {
@@ -8,6 +8,6 @@ export async function DELETE(req: NextRequest) {
     await deleteStep(sheet, rowIndex);
     return NextResponse.json({ ok: true });
   } catch (err) {
-    return NextResponse.json({ error: String(err) }, { status: 500 });
+    return NextResponse.json({ error: explainSheetsError(err) }, { status: 500 });
   }
 }

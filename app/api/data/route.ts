@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSheetData } from "@/lib/sheets";
+import { getSheetData, explainSheetsError } from "@/lib/sheets";
+
+export const dynamic = "force-dynamic";
 
 export async function GET(req: NextRequest) {
   const sheet = req.nextUrl.searchParams.get("sheet");
@@ -9,6 +11,6 @@ export async function GET(req: NextRequest) {
     const rows = await getSheetData(sheet);
     return NextResponse.json({ rows });
   } catch (err) {
-    return NextResponse.json({ error: String(err) }, { status: 500 });
+    return NextResponse.json({ error: explainSheetsError(err) }, { status: 500 });
   }
 }

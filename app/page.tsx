@@ -79,24 +79,43 @@ export default function DashboardPage() {
     const now = new Date();
     const currentMonthName = now.toLocaleString("en-US", { month: "long" }) + " " + now.getFullYear();
 
-    fetch("/api/months")
+    fetch("/api/months", { cache: "no-store" })
       .then((r) => r.json())
       .then(async (data) => {
-        const existingMonths: string[] = data.months ?? [];
-        if (!existingMonths.includes(currentMonthName)) {
-          const res = await fetch("/api/months", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ month: currentMonthName }),
-          });
-          const created = await res.json();
-          setMonths(created.months ?? existingMonths);
-        } else {
-          setMonths(existingMonths);
+        if (data.error) {
+          setError(data.error);
+          setLoading(false);
+          return;
         }
-        setSelectedMonth(currentMonthName);
+        const existingMonths: string[] = data.months ?? [];
+        if (existingMonths.includes(currentMonthName)) {
+          setMonths(existingMonths);
+          setSelectedMonth(currentMonthName);
+          return;
+        }
+        // Current month sheet is missing — try to create it.
+        const res = await fetch("/api/months", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ month: currentMonthName }),
+        });
+        const created = await res.json();
+        const months: string[] = created.months ?? existingMonths;
+        setMonths(months);
+        if (months.includes(currentMonthName)) {
+          setSelectedMonth(currentMonthName);
+        } else {
+          // Creation failed — show the most recent existing month instead of
+          // pointing the dashboard at a sheet that doesn't exist.
+          setSelectedMonth(months[0] ?? "");
+          if (created.error) setError(created.error);
+          if (months.length === 0) setLoading(false);
+        }
       })
-      .catch((e) => setError(String(e)));
+      .catch((e) => {
+        setError(String(e));
+        setLoading(false);
+      });
   }, []);
 
   const loadData = useCallback(async (month: string) => {

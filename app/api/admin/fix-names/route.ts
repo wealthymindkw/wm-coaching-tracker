@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { google } from "googleapis";
+import { createMonthSheet, explainSheetsError } from "@/lib/sheets";
 
 const SPREADSHEET_ID = process.env.GS_SPREADSHEET_ID!;
 const EXCLUDED = ["Weekly_Reports"];
@@ -21,20 +22,15 @@ interface Person {
 }
 
 export async function POST(req: Request) {
+  try {
   const { sheet } = await req.json();
   if (!sheet) return NextResponse.json({ error: "sheet required" }, { status: 400 });
 
   const sheets = google.sheets({ version: "v4", auth: getAuth() });
 
-  // Fix headers first (ensure spaces match what Telegram bot expects)
-  await sheets.spreadsheets.values.update({
-    spreadsheetId: SPREADSHEET_ID,
-    range: `'${sheet}'!A1:H1`,
-    valueInputOption: "USER_ENTERED",
-    requestBody: {
-      values: [["Date", "Time", "User ID", "Username", "First Name", "Last Name", "Step", "Results"]],
-    },
-  });
+  // Repair the header row safely: writes/inserts headers without ever
+  // overwriting a data row (handles headerless sheets by inserting a row).
+  await createMonthSheet(sheet);
 
   // Build name lookup from all other sheets
   const meta = await sheets.spreadsheets.get({ spreadsheetId: SPREADSHEET_ID });
@@ -126,4 +122,7 @@ export async function POST(req: Request) {
   }
 
   return NextResponse.json({ ok: true, fixed: updates.length, headersFixed: true });
+  } catch (err) {
+    return NextResponse.json({ error: explainSheetsError(err) }, { status: 500 });
+  }
 }

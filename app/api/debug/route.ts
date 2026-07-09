@@ -1,5 +1,8 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { google } from "googleapis";
+import { getMonths, explainSheetsError } from "@/lib/sheets";
+
+export const dynamic = "force-dynamic";
 
 function getAuth() {
   const auth = new google.auth.OAuth2(
@@ -19,22 +22,23 @@ async function getRawRows(sheetName: string) {
   return res.data.values ?? [];
 }
 
-export async function GET() {
+// Inspect the first rows of the two most recent month sheets (or ?sheet=...).
+export async function GET(req: NextRequest) {
   try {
-    const [april, may] = await Promise.allSettled([
-      getRawRows("April 2026"),
-      getRawRows("May 2026"),
-    ]);
+    const requested = req.nextUrl.searchParams.get("sheet");
+    const targets = requested ? [requested] : (await getMonths()).slice(0, 2);
 
-    return NextResponse.json({
-      "April 2026": april.status === "fulfilled"
-        ? april.value.map((row, i) => ({ row: i + 1, data: row }))
-        : { error: (april as PromiseRejectedResult).reason?.message },
-      "May 2026": may.status === "fulfilled"
-        ? may.value.map((row, i) => ({ row: i + 1, data: row }))
-        : { error: (may as PromiseRejectedResult).reason?.message },
+    const results = await Promise.allSettled(targets.map(getRawRows));
+    const out: Record<string, unknown> = {};
+    targets.forEach((name, i) => {
+      const r = results[i];
+      out[name] = r.status === "fulfilled"
+        ? r.value.map((row, j) => ({ row: j + 1, data: row }))
+        : { error: explainSheetsError(r.reason) };
     });
+
+    return NextResponse.json(out);
   } catch (err) {
-    return NextResponse.json({ error: String(err) }, { status: 500 });
+    return NextResponse.json({ error: explainSheetsError(err) }, { status: 500 });
   }
 }

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { addStep } from "@/lib/sheets";
+import { addStep, explainSheetsError } from "@/lib/sheets";
 
 export async function POST(req: NextRequest) {
   try {
@@ -9,6 +9,6 @@ export async function POST(req: NextRequest) {
     await addStep(sheet, { date, time, userId: userId ?? "", username: username ?? "", firstName: firstName ?? "", lastName: lastName ?? "", step, results: results ?? "" });
     return NextResponse.json({ ok: true });
   } catch (err) {
-    return NextResponse.json({ error: String(err) }, { status: 500 });
+    return NextResponse.json({ error: explainSheetsError(err) }, { status: 500 });
   }
 }

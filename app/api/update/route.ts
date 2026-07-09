@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { updateStep } from "@/lib/sheets";
+import { updateStep, explainSheetsError } from "@/lib/sheets";
 
 export async function PUT(req: NextRequest) {
   try {
@@ -8,6 +8,6 @@ export async function PUT(req: NextRequest) {
     await updateStep(sheet, rowIndex, step ?? "", results ?? "");
     return NextResponse.json({ ok: true });
   } catch (err) {
-    return NextResponse.json({ error: String(err) }, { status: 500 });
+    return NextResponse.json({ error: explainSheetsError(err) }, { status: 500 });
   }
 }
